@@ -1,0 +1,15 @@
+/* this is the background image code */
+body { 
+    background-image: url('awsome.jpg');
+    background-size: contain;
+    -mox-background-size: contain;
+    background-size: 100%;
+    
+
+/* this is the text color */ 
+color: blue; 
+/* this is the image height and width */
+
+    width: 650px; 
+    height: 100px;
+}
