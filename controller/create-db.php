@@ -1,7 +1,7 @@
 <?php
 // __dir__ . gets me out of the folder i am in an and brings 
 // me to source file to go to model/database.php
-require_once(__dir__ . "/../model/database.php");
+require_once(__dir__ . "/../model/config.php");
 // this code connects me to localhost and logs in 
 $connection = new mysqli($host, $username, $password);
 // shows connection error 

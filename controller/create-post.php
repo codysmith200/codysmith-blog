@@ -1,6 +1,6 @@
 <?php
 // we required this so we can connect to the variebols 
-require_once (__dir__ . "/../model/database.php");
+require_once (__dir__ . "/../model/config.php");
 // this connects us to mysqil 
  $connection = new mysqli($host, $username, $password, $database);
 // this will filter the input to the title
