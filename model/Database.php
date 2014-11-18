@@ -22,13 +22,15 @@ class Database {
     public function openconnection() {
         $this->connection = new mysqli($this->host, $this->username, $this->password, $this->Database);
         // this exits out of my web site and shows me the error 
-        if ($connection->connect_error) {
-            die("error: " . $connection->connect_error);
+        if ($this->connection->connect_error) {
+            die("error: " . $this->connection->connect_error);
         }
     }
-
+     // this checs if there is a connection 
     public function closeconection() {
-        
+      if(isset($this->connection)){
+        $this->connection->close();  
+      }  
     }
 
     public function query($string) {
