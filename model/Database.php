@@ -34,7 +34,12 @@ class Database {
     }
 
     public function query($string) {
-        
+      $this->openconnection();
+      $query = $this->connection->query($string);
+      
+      $this->closeconection();
+      
+      return $query;
     }
 
 }
