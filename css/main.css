@@ -4,11 +4,11 @@ body {
     background-size: contain;
     -mox-background-size: contain;
     background-size: 100%;
-    
 
-/* this is the text color */ 
-color: blue; 
-/* this is the image height and width */
+
+    /* this is the text color */ 
+    color: blue; 
+    /* this is the image height and width */
 
     width: 600px; 
     height: 100px;    

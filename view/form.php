@@ -1,6 +1,6 @@
 <?php
 // this direcs me to config .php 
- require_once(__dir__ ."/../model/config.php");
+require_once(__dir__ . "/../model/config.php");
 ?>
 
 <h1>create blog post</h1>
@@ -10,10 +10,10 @@
         <lable for="<title"></lable>
         <input type="text" name="title"/>
     </div>
-    
-      <div>
-          <lable for="post">post: </lable>
-          <textarea name="post"></textarea>
+
+    <div>
+        <lable for="post">post: </lable>
+        <textarea name="post"></textarea>
     </div>
     <!-- this is a button  -->
     <div>

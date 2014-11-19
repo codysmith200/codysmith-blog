@@ -26,20 +26,21 @@ class Database {
             die("error: " . $this->connection->connect_error);
         }
     }
-     // this checs if there is a connection 
+
+    // this checs if there is a connection 
     public function closeconection() {
-      if(isset($this->connection)){
-        $this->connection->close();  
-      }  
+        if (isset($this->connection)) {
+            $this->connection->close();
+        }
     }
 
     public function query($string) {
-      $this->openconnection();
-      $query = $this->connection->query($string);
-      
-      $this->closeconection();
-      
-      return $query;
+        $this->openconnection();
+        $query = $this->connection->query($string);
+
+        $this->closeconection();
+
+        return $query;
     }
 
 }
