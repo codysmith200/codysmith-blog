@@ -11,7 +11,8 @@ class Database {
     private $username;
     private $password;
     private $Database;
-
+    public $error; 
+    
     public function __construct($host, $username, $password, $database) {
         $this->host = $host;
         $this->username = $username;
@@ -54,6 +55,10 @@ class Database {
     public function query($string) {
         $this->openconnection();
         $query = $this->connection->query($string);
+        
+        if(!$query) {
+            $this->error = $this->connection->error;
+        }
 
         $this->closeconection();
 
