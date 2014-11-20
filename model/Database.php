@@ -17,6 +17,23 @@ class Database {
         $this->username = $username;
         $this->password = $password;
         $this->database = $database;
+
+        // this code connects me to localhost and logs in 
+        $this->connection = new mysqli($host, $username, $password);
+        // shows connection error 
+        if ($this->connection->connect_error) {
+            die("error: " . $this->connection->connect_error);
+        }
+        $exists = $this->connection->select_db($database);
+
+        if (!$exists) {
+            $query = $this->connection->query("CREATE DATABASE $database");
+            if ($query) {
+                echo "secsessfully created  database:" . $database;
+            }
+        } else {
+            echo "database already exists";
+        }
     }
 
     public function openconnection() {

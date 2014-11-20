@@ -1,4 +1,5 @@
 <?php
+require_once(__dir__ . "/database.php");
 
 $path = "/codysmith-blog/";
 
