@@ -5,7 +5,7 @@
 require_once(__dir__ . "/../model/config.php");
 
 
-$query = $connection->query("CREATE TABLE posts("
+$query = $_SESSION["connection"]->query("CREATE TABLE posts("
         . "id int(11)NOT NULL AUTO_INCREMENT,"
         . "tittle varchar(255) NOT NULL,"
         . "post text not Null,"
@@ -14,7 +14,7 @@ $query = $connection->query("CREATE TABLE posts("
 if ($query) {
     echo "succesfully created table";
 } else {
-    echo "$connection->error";
+    echo "<p>" . $_SESSION["connection"]->error . "</p>";
 }
 
 
