@@ -1,15 +1,29 @@
-/* this is the background image code */
-body { 
-    background-image: url('awsome.jpg');
-    background-size: contain;
-    -mox-background-size: contain;
-    background-size: 100%;
 
+body {
+  padding-top:50px;
+  background:url(go2.jpg);
+ color: blue;
+ 
+  /* make our image 100% width */
+  background-size:cover; 
+}
 
-    /* this is the text color */ 
-    color: blue; 
-    /* this is the image height and width */
+h1 {
+  font-family:'Chango';
+  font-size:50px;  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
-    width: 600px; 
-    height: 100px;    
+  /* set the background image */
+  background:url();
+  background-position:bottom;
+  background-size:cover;
+
+  /* set the transition speed */
+  transition:2s ease all;
+}
+
+/* handle what happens on hover */
+h1:hover {
+  background-position:top;
 }

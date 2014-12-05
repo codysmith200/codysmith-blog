@@ -10,7 +10,7 @@ class Database {
     private $host;
     private $username;
     private $password;
-    private $Database;
+    private $database;
     public $error; 
     
     public function __construct($host, $username, $password, $database) {
@@ -38,7 +38,7 @@ class Database {
     }
 
     public function openconnection() {
-        $this->connection = new mysqli($this->host, $this->username, $this->password, $this->Database);
+        $this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
         // this exits out of my web site and shows me the error 
         if ($this->connection->connect_error) {
             die("error: " . $this->connection->connect_error);
@@ -65,4 +65,4 @@ class Database {
         return $query;
     }
 
-}
+}  
